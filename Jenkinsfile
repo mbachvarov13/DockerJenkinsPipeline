@@ -5,14 +5,7 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                echo "Before"
-                                sh "docker-compose build"
-                                sh "docker-compose up -d"
-                                script {
-                                    def data = readFile(file: 'docker-compose.yml')
-                                    println(data)
-                                }
-                                echo "After"
+                                sh ("pwd")
                             }
                         }
                 stage('Executing Tests')
