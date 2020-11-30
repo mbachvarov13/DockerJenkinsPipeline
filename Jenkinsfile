@@ -6,7 +6,7 @@ stage('docker-compose UP')
 {
 steps{
 echo "Testing the Project.........."
-sh "dir"
+echo ${PWD##*/}
 }
 }
 stage('Executing Tests') 
