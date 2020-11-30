@@ -6,7 +6,7 @@ stage('docker-compose UP')
 {
 steps{
 echo "Before"
-sh ("cd")
+sh ("dir")
 script {
                   def data = readFile(file: 'docker-compose.yml')
                   println(data)
