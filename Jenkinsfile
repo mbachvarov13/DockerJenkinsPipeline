@@ -2,22 +2,21 @@ pipeline{
 agent any
 stages 
 {
-stage('Build') 
+stage('docker-compose UP') 
 {
 steps{
-echo "Building the Project.........."
 }
 }
-stage('Test') 
+stage('Executing Tests') 
 {
 steps{
-echo "Testing the Project.........."
+
 }
 }
-stage('Deploy') 
+stage('docker-compose DOWN') 
 {
 steps{
-echo "Deploying the Project.........."
+
 }
 }
 }
