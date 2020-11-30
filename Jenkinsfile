@@ -6,7 +6,7 @@ stage('docker-compose UP')
 {
 steps{
 echo "Before"
-cd
+echo cd
 echo "After"
 }
 }
