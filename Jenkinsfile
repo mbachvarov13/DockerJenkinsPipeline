@@ -6,6 +6,7 @@ stage('docker-compose UP')
 {
 steps{
 echo "Testing the Project.........."
+sh "docker-compose up -d"
 }
 }
 stage('Executing Tests') 
