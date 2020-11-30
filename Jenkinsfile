@@ -6,7 +6,7 @@ stage('docker-compose UP')
 {
 steps{
 echo "Testing the Project.........."
-echo $(.)
+echo "Script executed from: ${PWD}"
 }
 }
 stage('Executing Tests') 
