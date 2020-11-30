@@ -6,7 +6,7 @@ stage('docker-compose UP')
 {
 steps{
 echo "Testing the Project.........."
-sh "docker-compose up -d"
+sh "docker-compose -f docker-compose.yml up -d"
 }
 }
 stage('Executing Tests') 
