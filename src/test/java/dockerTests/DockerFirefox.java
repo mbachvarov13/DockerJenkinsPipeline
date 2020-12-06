@@ -21,7 +21,7 @@ public class DockerFirefox {
         driver.get("https://www.gmail.com");
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(120000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

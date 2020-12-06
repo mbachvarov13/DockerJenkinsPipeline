@@ -18,11 +18,11 @@ public class DockerChrome {
 
         RemoteWebDriver driver = new RemoteWebDriver(url, chromeOptions);
 
-        driver.get("https://www.google.com");
+        driver.get("https://www.gmail.com");
         System.out.println("Title is: " + driver.getTitle());
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(120000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
