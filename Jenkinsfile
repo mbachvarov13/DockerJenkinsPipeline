@@ -8,19 +8,19 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                bat 'mvn'
+                                bat 'docker-compose -f docker-compose up -d'
                             }
                         }
                 stage('Executing Tests')
                         {
                             steps {
-                                echo "Testing the Project.........."
+                                bat 'mvn test'
                             }
                         }
                 stage('docker-compose DOWN')
                         {
                             steps {
-                                echo "Testing the Project.........."
+                                bat 'docker-compose -f docker-compose down'
                             }
                         }
             }
