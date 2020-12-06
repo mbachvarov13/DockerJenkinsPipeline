@@ -5,7 +5,7 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                bat 'docker-compose up'
+                                bat 'mvn'
                             }
                         }
                 stage('Executing Tests')
