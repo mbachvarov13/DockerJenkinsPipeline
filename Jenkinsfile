@@ -14,18 +14,18 @@ pipeline {
                 stage('Executing Tests')
                         {
                             steps {
-                                bat ('mvn test')
+                                catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+                                    bat ('mvn test')
+                                }
                             }
                         }
                 stage('docker-compose DOWN')
                         {
                             steps {
-                                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                                     bat ('docker stop chrome firefox hub')
                                     bat ('docker rm chrome firefox hub')
                                 }
                             }
-                        }
             }
              post {
                     always {
