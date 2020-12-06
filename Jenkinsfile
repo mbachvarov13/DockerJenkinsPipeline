@@ -5,7 +5,7 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                sh ("docker-compose run web bash")
+                                sh ("docker ps -a")
                             }
                         }
                 stage('Executing Tests')
