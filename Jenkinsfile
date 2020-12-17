@@ -9,7 +9,7 @@ pipeline {
                         {
                             steps {
                                 bat ('docker-compose -f docker-compose.yml up -d')
-                            }
+                                   }
                         }
                 stage('Executing Tests')
                         {
@@ -22,8 +22,8 @@ pipeline {
                                 always {
                                     bat ('docker stop chrome firefox hub')
                                     bat ('docker rm chrome firefox hub')
-                                }
-                             }
+                                        }
+                                  }
                         }
                 /*stage('docker-compose DOWN')
                         {
@@ -33,19 +33,20 @@ pipeline {
                                 }
                             } */
 
-            }
-            stage('reports') {
-                steps {
-                script {
-                        allure([
-                        includeProperties: false,
-                         jdk: '',
-                          properties: [],
-                           reportBuildPolicy: 'ALWAYS',
-                            results: [[path: 'target/allure-results.']]
-                            ])
-                }
-                }
+
+                stage('reports') {
+                        steps {
+                            script {
+                                allure([
+                                     includeProperties: false,
+                                     jdk: '',
+                                     properties: [],
+                                     reportBuildPolicy: 'ALWAYS',
+                                     results: [[path: 'target/allure-results.']]
+                                        ])
+                                    }
+                               }
+                        }
             }
 
-}
+
