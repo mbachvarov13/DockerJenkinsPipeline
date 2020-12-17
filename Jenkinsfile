@@ -15,7 +15,7 @@ pipeline {
                         {
                             steps {
                                 //catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-                                    bat ('mvn test')
+                                    bat ('mvn clean test')
                                // }
                             }
                             post {
