@@ -14,9 +14,9 @@ pipeline {
                 stage('Executing Tests')
                         {
                             steps {
-                                catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+                                //catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
                                     bat ('mvn test')
-                                }
+                               // }
                             }
                             post {
                                 always {
