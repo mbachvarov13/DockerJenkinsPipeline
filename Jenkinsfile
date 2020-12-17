@@ -17,7 +17,7 @@ pipeline {
                                 //catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
                                     bat ('mvn clean test')
                                // }
-                            }
+                                    }
                             post {
                                 always {
                                     bat ('docker stop chrome firefox hub')
@@ -34,7 +34,7 @@ pipeline {
                             } */
 
 
-                stage('reports') {
+                /*stage('reports') {
                         steps {
                             script {
                                 allure([
@@ -46,7 +46,7 @@ pipeline {
                                         ])
                                     }
                                }
-                        }
+                        }*/
             }
 
 
