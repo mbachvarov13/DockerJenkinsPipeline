@@ -18,18 +18,21 @@ pipeline {
                                     bat ('mvn test')
                                 }
                             }
+                            post {
+                                always {
+                                    bat ('docker stop chrome firefox hub')
+                                    bat ('docker rm chrome firefox hub')
+                                }
+                             }
                         }
-                stage('docker-compose DOWN')
+                /*stage('docker-compose DOWN')
                         {
                             steps {
                                     bat ('docker stop chrome firefox hub')
                                     bat ('docker rm chrome firefox hub')
                                 }
-                            }
+                            } */
+
             }
-             post {
-                    always {
-                        echo 'Done !'
-                    }
-                }
+
 }
