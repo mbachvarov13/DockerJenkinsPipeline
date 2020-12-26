@@ -2,18 +2,18 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="11911" started-at="2020-12-17T10:49:41Z" finished-at="2020-12-17T10:49:53Z">
+  <suite name="Suite" duration-ms="10399" started-at="2020-12-26T11:02:45Z" finished-at="2020-12-26T11:02:56Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="11911" started-at="2020-12-17T10:49:41Z" finished-at="2020-12-17T10:49:53Z">
+    <test name="Test" duration-ms="10399" started-at="2020-12-26T11:02:45Z" finished-at="2020-12-26T11:02:56Z">
       <class name="dockerTests.DockerFirefox">
-        <test-method status="PASS" signature="firefoxTesOne()[pri:0, instance:dockerTests.DockerFirefox@74294adb]" name="firefoxTesOne" duration-ms="11872" started-at="2020-12-17T10:49:41Z" finished-at="2020-12-17T10:49:53Z">
+        <test-method status="PASS" signature="firefoxTesOne()[pri:0, instance:dockerTests.DockerFirefox@74294adb]" name="firefoxTesOne" duration-ms="10367" started-at="2020-12-26T11:02:45Z" finished-at="2020-12-26T11:02:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firefoxTesOne -->
       </class> <!-- dockerTests.DockerFirefox -->
       <class name="dockerTests.DockerChrome">
-        <test-method status="PASS" signature="chromeTesOne()[pri:0, instance:dockerTests.DockerChrome@58a90037]" name="chromeTesOne" duration-ms="4963" started-at="2020-12-17T10:49:41Z" finished-at="2020-12-17T10:49:46Z">
+        <test-method status="PASS" signature="chromeTesOne()[pri:0, instance:dockerTests.DockerChrome@58a90037]" name="chromeTesOne" duration-ms="5154" started-at="2020-12-26T11:02:45Z" finished-at="2020-12-26T11:02:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chromeTesOne -->

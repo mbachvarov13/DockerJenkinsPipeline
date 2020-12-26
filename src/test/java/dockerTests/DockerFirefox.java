@@ -18,13 +18,7 @@ public class DockerFirefox {
 
         RemoteWebDriver driver = new RemoteWebDriver(url, firefoxOptions);
 
-        driver.get("https://www.gmail.com");
-
-//        try {
-//            Thread.sleep(10000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        driver.get("https://www.google.com");
 
         System.out.println("Title is: " + driver.getTitle());
 

@@ -14,9 +14,7 @@ pipeline {
                 stage('Executing Tests')
                         {
                             steps {
-                                //catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
                                     bat ('mvn clean test')
-                               // }
                                     }
                             post {
                                 always {
@@ -25,15 +23,6 @@ pipeline {
                                         }
                                   }
                         }
-                /*stage('docker-compose DOWN')
-                        {
-                            steps {
-                                    bat ('docker stop chrome firefox hub')
-                                    bat ('docker rm chrome firefox hub')
-                                }
-                            } */
-
-
                 stage('reports') {
                         steps {
                             script {

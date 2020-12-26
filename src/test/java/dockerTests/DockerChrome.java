@@ -19,15 +19,9 @@ public class DockerChrome {
         RemoteWebDriver driver = new RemoteWebDriver(url, chromeOptions);
 
         driver.get("https://www.gmail.com");
-        System.out.println("Title is: " + driver.getTitle());
 
-//        try {
-//            Thread.sleep(10000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        System.out.println("Title is: " + driver.getTitle());
 
         driver.quit();
     }
-
 }
